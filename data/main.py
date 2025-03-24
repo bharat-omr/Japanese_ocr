@@ -13,6 +13,7 @@ from pdf2image import convert_from_path
 
 
 
+
 # Configure Logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
