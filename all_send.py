@@ -84,7 +84,7 @@ def extract_text_from_images(image_paths, batch_size=10):
     return extracted_texts
 
 # 📌 Set the main folder containing images (Update this path)
-main_folder = "data/cropped_questions"  # Change to your actual folder path
+main_folder = "processed_data\cropped_questions"  # Change to your actual folder path
 
 # Find all images in the folder (Sorted numerically)
 image_paths = get_all_image_paths(main_folder)

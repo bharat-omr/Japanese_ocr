@@ -96,46 +96,55 @@ def save_cropped_questions(image_paths):
 
 # ------------------- Step 3: Extract Text Using Gemini AI -------------------
 def extract_text_from_images(image_filenames, batch_size=10):
-    """Extract handwritten text from cropped images using Gemini AI in batches."""
+    """Extract handwritten text from cropped images using Gemini AI in batches and save to a file."""
     extracted_data = []
     total_images = len(image_filenames)
+    text_file_path = os.path.join(BASE_DIR, "extracted_text.txt")  # Path to save text
 
-    for i in range(0, total_images, batch_size):
-        batch = image_filenames[i:i + batch_size]
-        images = []
+    with open(text_file_path, "w", encoding="utf-8") as text_file:
+        for i in range(0, total_images, batch_size):
+            batch = image_filenames[i:i + batch_size]
+            images = []
 
-        for filename in batch:
-            try:
-                image_path = os.path.join(CROPPED_DIR, filename)
-                image = PIL.Image.open(image_path).convert("RGB")
-                images.append(image)
-            except Exception as e:
-                extracted_data.append({"image_url": f"http://192.168.1.78:5000/image/{filename}", "text": f"❌ Error: {str(e)}"})
+            for filename in batch:
+                try:
+                    image_path = os.path.join(CROPPED_DIR, filename)
+                    image = PIL.Image.open(image_path).convert("RGB")
+                    images.append(image)
+                except Exception as e:
+                    extracted_text = f"❌ Error: {str(e)}"
+                    extracted_data.append({"image_url": f"http://192.168.1.78:5000/image/{filename}", "text": extracted_text})
+                    text_file.write(f"Image: {filename}\nText: {extracted_text}\n\n")
+                    continue
+
+            if not images:
                 continue
 
-        if not images:
-            continue
+            prompt = (
+                "Convert the handwriting to text for each image. If needed, correct mistakes based on context. "
+                "Respond with extracted text only, maintaining the order of images."
+            )
 
-        prompt = (
-            "Convert the handwriting to text for each image. If needed, correct mistakes based on context. "
-            "Respond with extracted text only, maintaining the order of images."
-        )
+            try:
+                response = model.generate_content([prompt] + images)
+                texts = response.text.strip().split("\n") if response.text else []
 
-        try:
-            response = model.generate_content([prompt] + images)
-            texts = response.text.strip().split("\n") if response.text else []
+                for j, filename in enumerate(batch):
+                    extracted_text = texts[j] if j < len(texts) else "No text detected"
+                    extracted_data.append({"image_url": f"http://192.168.1.78:5000/image/{filename}", "text": extracted_text})
+                    text_file.write(f"Image: {filename}\nText: {extracted_text}\n\n")
 
-            for j, filename in enumerate(batch):
-                extracted_text = texts[j] if j < len(texts) else "No text detected"
-                extracted_data.append({"image_url": f"http://192.168.1.78:5000/image/{filename}", "text": extracted_text})
+            except Exception as e:
+                for filename in batch:
+                    extracted_text = f"❌ AI processing failed - {str(e)}"
+                    extracted_data.append({"image_url": f"http://192.168.1.78:5000/image/{filename}", "text": extracted_text})
+                    text_file.write(f"Image: {filename}\nText: {extracted_text}\n\n")
 
-        except Exception as e:
-            for filename in batch:
-                extracted_data.append({"image_url": f"http://192.168.1.78:5000/image/{filename}", "text": f"❌ AI processing failed - {str(e)}"})
+            time.sleep(2)  # Avoid hitting API rate limits
 
-        time.sleep(2)  # Avoid hitting API rate limits
-
+    logging.info(f"Extracted text saved to {text_file_path}")
     return extracted_data
+
 
 # ------------------- Flask API -------------------
 @app.route("/extract-text", methods=["POST"])
