@@ -1,0 +1,288 @@
+Image Filename: question_1_1.png
+Image URL: http://192.168.1.78:5000/image/question_1_1.png
+Extracted Text: don hun dpon
+----------------------------------------
+Image Filename: question_1_2.png
+Image URL: http://192.168.1.78:5000/image/question_1_2.png
+Extracted Text: としもんだい
+----------------------------------------
+Image Filename: question_1_3.png
+Image URL: http://192.168.1.78:5000/image/question_1_3.png
+Extracted Text: アジア　N1SE
+----------------------------------------
+Image Filename: question_1_4.png
+Image URL: http://192.168.1.78:5000/image/question_1_4.png
+Extracted Text: 新興工業経済地域
+----------------------------------------
+Image Filename: question_1_5.png
+Image URL: http://192.168.1.78:5000/image/question_1_5.png
+Extracted Text: 季節風（モンスーン）
+----------------------------------------
+Image Filename: question_1_6.png
+Image URL: http://192.168.1.78:5000/image/question_1_6.png
+Extracted Text: 世界の屋根
+----------------------------------------
+Image Filename: question_2_1.png
+Image URL: http://192.168.1.78:5000/image/question_2_1.png
+Extracted Text: 1989年1月7日
+----------------------------------------
+Image Filename: question_2_2.png
+Image URL: http://192.168.1.78:5000/image/question_2_2.png
+Extracted Text: としもんだい
+----------------------------------------
+Image Filename: question_2_3.png
+Image URL: http://192.168.1.78:5000/image/question_2_3.png
+Extracted Text: アジア　NISE
+----------------------------------------
+Image Filename: question_2_4.png
+Image URL: http://192.168.1.78:5000/image/question_2_4.png
+Extracted Text: 新興工業経済地域
+----------------------------------------
+Image Filename: question_2_5.png
+Image URL: http://192.168.1.78:5000/image/question_2_5.png
+Extracted Text: 季節風 (モンスーン)
+----------------------------------------
+Image Filename: question_2_6.png
+Image URL: http://192.168.1.78:5000/image/question_2_6.png
+Extracted Text: 世界の屋根
+----------------------------------------
+Image Filename: question_3_1.png
+Image URL: http://192.168.1.78:5000/image/question_3_1.png
+Extracted Text: 1989年1月7日
+----------------------------------------
+Image Filename: question_3_2.png
+Image URL: http://192.168.1.78:5000/image/question_3_2.png
+Extracted Text: としもんだい
+----------------------------------------
+Image Filename: question_3_3.png
+Image URL: http://192.168.1.78:5000/image/question_3_3.png
+Extracted Text: アジア NISE
+----------------------------------------
+Image Filename: question_3_4.png
+Image URL: http://192.168.1.78:5000/image/question_3_4.png
+Extracted Text: 新興工業経済地域
+----------------------------------------
+Image Filename: question_3_5.png
+Image URL: http://192.168.1.78:5000/image/question_3_5.png
+Extracted Text: 季節風 (モンスーン)
+----------------------------------------
+Image Filename: question_3_6.png
+Image URL: http://192.168.1.78:5000/image/question_3_6.png
+Extracted Text: 世界の屋根
+----------------------------------------
+Image Filename: question_4_1.png
+Image URL: http://192.168.1.78:5000/image/question_4_1.png
+Extracted Text: 1989年1月7日
+----------------------------------------
+Image Filename: question_4_2.png
+Image URL: http://192.168.1.78:5000/image/question_4_2.png
+Extracted Text: としもんだい
+----------------------------------------
+Image Filename: question_4_3.png
+Image URL: http://192.168.1.78:5000/image/question_4_3.png
+Extracted Text: アジア NISE
+----------------------------------------
+Image Filename: question_4_4.png
+Image URL: http://192.168.1.78:5000/image/question_4_4.png
+Extracted Text: 深圳工業経済地域
+----------------------------------------
+Image Filename: question_4_5.png
+Image URL: http://192.168.1.78:5000/image/question_4_5.png
+Extracted Text: 季節風(モンスーン)
+----------------------------------------
+Image Filename: question_4_6.png
+Image URL: http://192.168.1.78:5000/image/question_4_6.png
+Extracted Text: 世界の屋根
+----------------------------------------
+Image Filename: question_5_1.png
+Image URL: http://192.168.1.78:5000/image/question_5_1.png
+Extracted Text: 1989年1月7日
+----------------------------------------
+Image Filename: question_5_2.png
+Image URL: http://192.168.1.78:5000/image/question_5_2.png
+Extracted Text: としもんだい
+----------------------------------------
+Image Filename: question_5_3.png
+Image URL: http://192.168.1.78:5000/image/question_5_3.png
+Extracted Text: アジア NISE
+----------------------------------------
+Image Filename: question_5_4.png
+Image URL: http://192.168.1.78:5000/image/question_5_4.png
+Extracted Text: 新興工業経済地域
+----------------------------------------
+Image Filename: question_5_5.png
+Image URL: http://192.168.1.78:5000/image/question_5_5.png
+Extracted Text: 季節風(モンスーン)
+----------------------------------------
+Image Filename: question_5_6.png
+Image URL: http://192.168.1.78:5000/image/question_5_6.png
+Extracted Text: 世界の屋根
+----------------------------------------
+Image Filename: question_6_1.png
+Image URL: http://192.168.1.78:5000/image/question_6_1.png
+Extracted Text: 1989年11月17日
+----------------------------------------
+Image Filename: question_6_2.png
+Image URL: http://192.168.1.78:5000/image/question_6_2.png
+Extracted Text: としもんだい
+----------------------------------------
+Image Filename: question_6_3.png
+Image URL: http://192.168.1.78:5000/image/question_6_3.png
+Extracted Text: アジア NIES
+----------------------------------------
+Image Filename: question_6_4.png
+Image URL: http://192.168.1.78:5000/image/question_6_4.png
+Extracted Text: 新興工業経済地域
+----------------------------------------
+Image Filename: question_6_5.png
+Image URL: http://192.168.1.78:5000/image/question_6_5.png
+Extracted Text: 季節風(モンスーン)
+----------------------------------------
+Image Filename: question_6_6.png
+Image URL: http://192.168.1.78:5000/image/question_6_6.png
+Extracted Text: 世界の屋根
+----------------------------------------
+Image Filename: question_7_1.png
+Image URL: http://192.168.1.78:5000/image/question_7_1.png
+Extracted Text: 1989年1月17日
+----------------------------------------
+Image Filename: question_7_2.png
+Image URL: http://192.168.1.78:5000/image/question_7_2.png
+Extracted Text: としもんだい
+----------------------------------------
+Image Filename: question_7_3.png
+Image URL: http://192.168.1.78:5000/image/question_7_3.png
+Extracted Text: アジア NIES
+----------------------------------------
+Image Filename: question_7_4.png
+Image URL: http://192.168.1.78:5000/image/question_7_4.png
+Extracted Text: 新興工業経済地域
+----------------------------------------
+Image Filename: question_7_5.png
+Image URL: http://192.168.1.78:5000/image/question_7_5.png
+Extracted Text: 季節風（モンスーン）
+----------------------------------------
+Image Filename: question_7_6.png
+Image URL: http://192.168.1.78:5000/image/question_7_6.png
+Extracted Text: 世界の屋根
+----------------------------------------
+Image Filename: question_8_1.png
+Image URL: http://192.168.1.78:5000/image/question_8_1.png
+Extracted Text: 1989年1月7日
+----------------------------------------
+Image Filename: question_8_2.png
+Image URL: http://192.168.1.78:5000/image/question_8_2.png
+Extracted Text: としもんだい
+----------------------------------------
+Image Filename: question_8_3.png
+Image URL: http://192.168.1.78:5000/image/question_8_3.png
+Extracted Text: アジア NISE
+----------------------------------------
+Image Filename: question_8_4.png
+Image URL: http://192.168.1.78:5000/image/question_8_4.png
+Extracted Text: 新興工業経済地域
+----------------------------------------
+Image Filename: question_8_5.png
+Image URL: http://192.168.1.78:5000/image/question_8_5.png
+Extracted Text: 季節風（モンスーン）
+----------------------------------------
+Image Filename: question_8_6.png
+Image URL: http://192.168.1.78:5000/image/question_8_6.png
+Extracted Text: 世界の屋根
+----------------------------------------
+Image Filename: question_9_1.png
+Image URL: http://192.168.1.78:5000/image/question_9_1.png
+Extracted Text: 1989年1月7日
+----------------------------------------
+Image Filename: question_9_2.png
+Image URL: http://192.168.1.78:5000/image/question_9_2.png
+Extracted Text: としもんだい
+----------------------------------------
+Image Filename: question_9_3.png
+Image URL: http://192.168.1.78:5000/image/question_9_3.png
+Extracted Text: アジア NIES
+----------------------------------------
+Image Filename: question_9_4.png
+Image URL: http://192.168.1.78:5000/image/question_9_4.png
+Extracted Text: 新興工業経済地域
+----------------------------------------
+Image Filename: question_9_5.png
+Image URL: http://192.168.1.78:5000/image/question_9_5.png
+Extracted Text: 季節風(モンスーン)
+----------------------------------------
+Image Filename: question_9_6.png
+Image URL: http://192.168.1.78:5000/image/question_9_6.png
+Extracted Text: 世界の屋根
+----------------------------------------
+Image Filename: question_10_1.png
+Image URL: http://192.168.1.78:5000/image/question_10_1.png
+Extracted Text: 1989年1月7日
+----------------------------------------
+Image Filename: question_10_2.png
+Image URL: http://192.168.1.78:5000/image/question_10_2.png
+Extracted Text: とし問題
+----------------------------------------
+Image Filename: question_10_3.png
+Image URL: http://192.168.1.78:5000/image/question_10_3.png
+Extracted Text: アジア NIES
+----------------------------------------
+Image Filename: question_10_4.png
+Image URL: http://192.168.1.78:5000/image/question_10_4.png
+Extracted Text: 新興工業経済地域
+----------------------------------------
+Image Filename: question_10_5.png
+Image URL: http://192.168.1.78:5000/image/question_10_5.png
+Extracted Text: 季節風(モンスーン)
+----------------------------------------
+Image Filename: question_10_6.png
+Image URL: http://192.168.1.78:5000/image/question_10_6.png
+Extracted Text: 世界の屋根
+----------------------------------------
+Image Filename: question_11_1.png
+Image URL: http://192.168.1.78:5000/image/question_11_1.png
+Extracted Text: 1989年1月7日
+----------------------------------------
+Image Filename: question_11_2.png
+Image URL: http://192.168.1.78:5000/image/question_11_2.png
+Extracted Text: としもんだい
+----------------------------------------
+Image Filename: question_11_3.png
+Image URL: http://192.168.1.78:5000/image/question_11_3.png
+Extracted Text: アジア NISE
+----------------------------------------
+Image Filename: question_11_4.png
+Image URL: http://192.168.1.78:5000/image/question_11_4.png
+Extracted Text: 新興工業経済地域
+----------------------------------------
+Image Filename: question_11_5.png
+Image URL: http://192.168.1.78:5000/image/question_11_5.png
+Extracted Text: 季節風(モンスーン)
+----------------------------------------
+Image Filename: question_11_6.png
+Image URL: http://192.168.1.78:5000/image/question_11_6.png
+Extracted Text: 世界の屋根
+----------------------------------------
+Image Filename: question_12_1.png
+Image URL: http://192.168.1.78:5000/image/question_12_1.png
+Extracted Text: 1989年1月7日
+----------------------------------------
+Image Filename: question_12_2.png
+Image URL: http://192.168.1.78:5000/image/question_12_2.png
+Extracted Text: としもんだい
+----------------------------------------
+Image Filename: question_12_3.png
+Image URL: http://192.168.1.78:5000/image/question_12_3.png
+Extracted Text: アジアNISE
+----------------------------------------
+Image Filename: question_12_4.png
+Image URL: http://192.168.1.78:5000/image/question_12_4.png
+Extracted Text: 新興工業経済地域
+----------------------------------------
+Image Filename: question_12_5.png
+Image URL: http://192.168.1.78:5000/image/question_12_5.png
+Extracted Text: 季節風（モンスーン）
+----------------------------------------
+Image Filename: question_12_6.png
+Image URL: http://192.168.1.78:5000/image/question_12_6.png
+Extracted Text: 世界の屋根
+----------------------------------------
