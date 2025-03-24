@@ -1,0 +1,8 @@
+Image Filename: question_1_1.png
+Image URL: http://192.168.1.78:5000/image/question_1_1.png
+Extracted Text: 1989年1月7日fdsfsafs
+----------------------------------------
+Image Filename: question_1_1.png
+Image URL: http://192.168.1.78:5000/image/question_1_1.png
+Extracted Text: 1989年1月7日fdsfsafs
+----------------------------------------

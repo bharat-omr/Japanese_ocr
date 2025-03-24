@@ -23,7 +23,8 @@ Image URL: http://192.168.1.78:5000/image/question_1_6.png
 Extracted Text: 世界の屋根
 ----------------------------------------
 Image Filename: question_2_1.png
-Image URL: http://192.168.1.78:5000/image/question_2_1.png
+Image URL: 
+
 Extracted Text: 1989年1月7日
 ----------------------------------------
 Image Filename: question_2_2.png
