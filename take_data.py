@@ -9,7 +9,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Create an 'uploads' folder if it doesn't exist
-UPLOAD_FOLDER = "Japanese_ocr/uploads"
+UPLOAD_FOLDER = "ocr_data/uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 @app.route('/')
