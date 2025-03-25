@@ -46,10 +46,15 @@ def verify_japanese_text(text_data):
 
         # Gemini AI prompt
         prompt = (
-            "Check if the following texts are valid in Japanese, with correct meaning or spelling. "
-            "For each text, respond only or only with 'Correct' or 'Incorrect' in the same order:\n\n"
-            + "\n".join(prompt_texts)
-        )
+    "Check if the following Japanese texts are correctly extracted, including spelling and meaning accuracy."
+    "For example, if the text is 'としもんだい', it should mean 'Elderly problems' and is correct."
+    "Similarly, 'アジア NISE' should mean 'Asia NISE' and is also correct."
+    "For each given text, verify if both the spelling and meaning are correct in the Japanese language."
+    "Respond with only 'Correct' or 'Incorrect' in the same order as the input texts.\n\n"
+    + "\n".join(prompt_texts)
+)
+
+
 
         try:
             response = model.generate_content(prompt)
@@ -92,3 +97,9 @@ def verify_text():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5002, debug=True)
+
+
+
+
+
+
