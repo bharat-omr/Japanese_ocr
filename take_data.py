@@ -1,22 +1,22 @@
 import os
 import json
-from flask import Flask, request, jsonify
+from flask import Flask,Blueprint, request, jsonify
 from flask_cors import CORS
 from urllib.parse import urlparse
 from datetime import datetime
 
-app = Flask(__name__)
-CORS(app)
 
+
+submit_bp = Blueprint("submit", __name__)
 # Create an 'uploads' folder if it doesn't exist
 UPLOAD_FOLDER = "ocr_data/uploads"
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
-@app.route('/')
+@submit_bp.route('/')
 def home():
     return "Flask API is running!"
 
-@app.route('/submit', methods=['POST'])
+@submit_bp.route('/submit', methods=['POST'])
 def submit_data():
     try:
         # Get raw data from request
@@ -73,7 +73,6 @@ def submit_data():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=5003, debug=True)
+
 
 

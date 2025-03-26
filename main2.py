@@ -1,11 +1,12 @@
 import os
 import time
 import logging
-from flask import Flask, jsonify
+from flask import Flask, jsonify,Blueprint
 from flask_cors import CORS
 import google.generativeai as genai
 from dotenv import load_dotenv
 
+verify_bp = Blueprint("verify", __name__)
 # Configure Logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
@@ -20,11 +21,7 @@ if not API_KEY:
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel("gemini-2.0-flash")
 
-# Flask App
-app = Flask(__name__)
 
-# Enable CORS for all routes
-CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Directory containing the extracted text file
 TEXT_DIR = "processed_data"
@@ -72,7 +69,7 @@ def verify_japanese_text(text_data):
 
     return verified_results
 
-@app.route("/verify-japanese", methods=["GET"])
+@verify_bp.route("/verify-japanese", methods=["GET"])
 def verify_text():
     """API endpoint to read extracted_text.txt and verify Japanese text."""
     if not os.path.exists(TEXT_FILE):
@@ -95,8 +92,7 @@ def verify_text():
         logging.error(f"Error processing request: {e}")
         return jsonify({"error": str(e)}), 500
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5002, debug=True)
+
 
 
 

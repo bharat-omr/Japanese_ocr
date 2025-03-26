@@ -11,7 +11,7 @@ Image: question_1_4.png
 Text: 新興工業経済地域
 
 Image: question_1_5.png
-Text: 季節風（モンスーン）
+Text: 季節風(モンスーン)
 
 Image: question_1_6.png
 Text: 世界の屋根
@@ -29,7 +29,7 @@ Image: question_2_4.png
 Text: 新興工業経済地域
 
 Image: question_2_5.png
-Text: 季節風 (モンスーン)
+Text: 季節風（モンスーン）
 
 Image: question_2_6.png
 Text: 世界の屋根
@@ -41,13 +41,13 @@ Image: question_3_2.png
 Text: としもんだい
 
 Image: question_3_3.png
-Text: アジア NIES
+Text: アジアNIES
 
 Image: question_3_4.png
 Text: 新興工業経済地域
 
 Image: question_3_5.png
-Text: 季節風 (モンスーン)
+Text: 季節風（モンスーン）
 
 Image: question_3_6.png
 Text: 世界の屋根
@@ -62,7 +62,7 @@ Image: question_4_3.png
 Text: アジア NISE
 
 Image: question_4_4.png
-Text: 深圳工業経済地域
+Text: 新興工業経済地域
 
 Image: question_4_5.png
 Text: 季節風(モンスーン)
@@ -71,7 +71,7 @@ Image: question_4_6.png
 Text: 世界の屋根
 
 Image: question_5_1.png
-Text: 1989年 1月7日
+Text: 1989年1月7日
 
 Image: question_5_2.png
 Text: としもんだい
@@ -95,7 +95,7 @@ Image: question_6_2.png
 Text: としもんだい
 
 Image: question_6_3.png
-Text: アジア NIES
+Text: アジアNIES
 
 Image: question_6_4.png
 Text: 新興工業経済地域
@@ -113,13 +113,13 @@ Image: question_7_2.png
 Text: としもんだい
 
 Image: question_7_3.png
-Text: アジア NIES
+Text: アジアNIES
 
 Image: question_7_4.png
 Text: 新興工業経済地域
 
 Image: question_7_5.png
-Text: 季節風(モンスーン)
+Text: 季節風（モンスーン）
 
 Image: question_7_6.png
 Text: 世界の屋根
@@ -131,13 +131,13 @@ Image: question_8_2.png
 Text: としもんだい
 
 Image: question_8_3.png
-Text: アジア N I S E
+Text: アジア NIES
 
 Image: question_8_4.png
 Text: 新興工業経済地域
 
 Image: question_8_5.png
-Text: 季節風(モンスーン)
+Text: 季節風（モンスーン）
 
 Image: question_8_6.png
 Text: 世界の屋根
@@ -164,16 +164,16 @@ Image: question_10_1.png
 Text: 1989年1月7日
 
 Image: question_10_2.png
-Text: としもんだい
+Text: とし問題
 
 Image: question_10_3.png
-Text: アジアNIES
+Text: アジア NIES
 
 Image: question_10_4.png
 Text: 新興工業経済地域
 
 Image: question_10_5.png
-Text: 季節風(モンスーン)
+Text: 季節風（モンスーン）
 
 Image: question_10_6.png
 Text: 世界の屋根
@@ -185,7 +185,7 @@ Image: question_11_2.png
 Text: としもんだい
 
 Image: question_11_3.png
-Text: アジア NIES
+Text: アジアNIES
 
 Image: question_11_4.png
 Text: 新興工業経済地域
@@ -203,13 +203,13 @@ Image: question_12_2.png
 Text: としもんだい
 
 Image: question_12_3.png
-Text: アジア NIES
+Text: アジアNIES
 
 Image: question_12_4.png
 Text: 新興工業経済地域
 
 Image: question_12_5.png
-Text: 季節風（モンスーン）
+Text: 季節風 (モンスーン)
 
 Image: question_12_6.png
 Text: 世界の屋根

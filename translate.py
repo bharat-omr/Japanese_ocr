@@ -1,16 +1,22 @@
-import asyncio
+from flask import Blueprint, request, jsonify
 from googletrans import Translator
 
-async def translate_japanese_to_english(text):
-    translator = Translator()
-    result = await translator.translate(text, src='ja', dest='en')  # Await the coroutine
-    return result.text  # Returns the translated text
+translate_bp = Blueprint("translate", __name__)
+translator = Translator()
 
-# Example usage
-async def main():
-    japanese_texts = ["こんにちは", "ありがとう", "日本は美しい"]
-    for text in japanese_texts:
-        translated_text = await translate_japanese_to_english(text)
-        print(f"Japanese: {text} → English: {translated_text}")
+@translate_bp.route('/translate', methods=['POST'])
+def translate_text():
+    try:
+        data = request.get_json()
+        english_text = data.get("text", "")
 
-asyncio.run(main())  # Run the async function
+        if not english_text:
+            return jsonify({"error": "No text provided"}), 400
+
+        # Just call translate normally (without async)
+        translated = translator.translate(english_text, src="en", dest="ja")
+
+        return jsonify({"translated_text": translated.text})
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
