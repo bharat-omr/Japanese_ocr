@@ -36,38 +36,47 @@ def verify_japanese_text(text_data):
 
     for i in range(0, total_texts, BATCH_SIZE):
         batch = text_data[i:i + BATCH_SIZE]  # Take 10 texts at a time
-        prompt_texts = [text for text in batch if text.strip()]  # Remove empty lines
+        prompt_texts = [f"{j+1}. {text}" for j, text in enumerate(batch) if text.strip()]  # Numbered input
 
         if not prompt_texts:
             continue  # Skip empty batches
 
-        # Gemini AI prompt
+        # Structured Gemini AI prompt
         prompt = (
-    "Check if the following Japanese texts are correctly extracted, including spelling and meaning accuracy."
-    "For example, if the text is 'としもんだい', it should mean 'Elderly problems' and is correct."
-    "Similarly, 'アジア NISE' should mean 'Asia NISE' and is also correct."
-    "For each given text, verify if both the spelling and meaning are correct in the Japanese language."
-    "Respond with only 'Correct' or 'Incorrect' in the same order as the input texts.\n\n"
-    + "\n".join(prompt_texts)
-)
-
-
+            "Check if the following Japanese texts are correctly extracted, including spelling and meaning accuracy.\n"
+            "For each text, return 'Correct' or 'Incorrect'.\n"
+            "Format your response strictly as:\n"
+            "1. Correct\n"
+            "2. Incorrect\n"
+            "...\n\n"
+            + "\n".join(prompt_texts)
+        )
 
         try:
             response = model.generate_content(prompt)
-            results = response.text.strip().split("\n") if response.text else []
 
+            if not response.text:
+                logging.error("AI returned an empty response.")
+                results = ["AI Error"] * len(batch)
+            else:
+                results = response.text.strip().split("\n")
+
+            # Ensure correct mapping between input and response
+            verified_batch = []
             for j, text in enumerate(batch):
-                verification = results[j] if j < len(results) else "❌ AI Error"
-                verified_results.append({"text": text, "verification": verification})
+                verification = results[j].split(".")[-1].strip() if j < len(results) else "AI Error"
+                verified_batch.append({"text": text, "verification": verification})
+
+            verified_results.extend(verified_batch)
 
         except Exception as e:
             logging.error(f"AI processing error: {e}")
-            verified_results.extend([{"text": text, "verification": "❌ AI Processing Failed"} for text in batch])
+            verified_results.extend([{"text": text, "verification": "AI Processing Failed"} for text in batch])
 
         time.sleep(2)  # Prevent hitting API limits
 
     return verified_results
+
 
 @verify_bp.route("/verify-japanese", methods=["GET"])
 def verify_text():
