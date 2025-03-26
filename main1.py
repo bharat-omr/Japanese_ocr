@@ -21,6 +21,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(
 # Load API Key from .env file
 load_dotenv()
 API_KEY = os.getenv("GOOGLE_API_KEY")
+BACKEND_API = os.getenv("BACKEND_API")
 
 if not API_KEY:
     raise ValueError("API key not found. Set GOOGLE_API_KEY in the environment variables.")
@@ -114,7 +115,7 @@ def extract_text_from_images(image_filenames, batch_size=10):
                     image = PIL.Image.open(image_path).convert("RGB")
                     images.append(image)
                 except Exception as e:
-                    extracted_data.append({"image_url": f"http://192.168.1.78:5000/static/cropped_questions/{filename}", "text": f"❌ Error: {str(e)}"})
+                    extracted_data.append({"image_url": f"{BACKEND_API}/static/cropped_questions/{filename}", "text": f"❌ Error: {str(e)}"})
                     continue
 
             if not images:
@@ -131,14 +132,14 @@ def extract_text_from_images(image_filenames, batch_size=10):
 
                 for j, filename in enumerate(batch):
                     extracted_text = texts[j] if j < len(texts) else "No text detected"
-                    extracted_data.append({"image_url": f"http://192.168.1.78:5000/static/cropped_questions/{filename}", "text": extracted_text})
+                    extracted_data.append({"image_url": f"{BACKEND_API}/static/cropped_questions/{filename}", "text": extracted_text})
                     
                     # ✅ Save in "Image: filename | Text: extracted text" format
                     text_file.write(f"Image: {filename}\nText: {extracted_text}\n\n")
 
             except Exception as e:
                 for filename in batch:
-                    extracted_data.append({"image_url": f"http://192.168.1.78:5000/static/cropped_questions/{filename}", "text": f"❌ AI processing failed - {str(e)}"})
+                    extracted_data.append({"image_url": f"{BACKEND_API}/static/cropped_questions/{filename}", "text": f"❌ AI processing failed - {str(e)}"})
 
             time.sleep(2)  # Avoid API rate limits
 
