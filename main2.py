@@ -43,14 +43,15 @@ def verify_japanese_text(text_data):
 
         # Structured Gemini AI prompt
         prompt = (
-            "Check if the following Japanese texts are correctly extracted, including spelling and meaning accuracy.\n"
-            "For each text, return 'Correct' or 'Incorrect'.\n"
-            "Format your response strictly as:\n"
-            "1. Correct\n"
-            "2. Incorrect\n"
-            "...\n\n"
-            + "\n".join(prompt_texts)
-        )
+    "Evaluate the accuracy of the following extracted Japanese texts based on spelling, grammar, and meaning.\n"
+    "If at least 80% of the text is correct and the errors are minor (such as small typos, spacing, or minor variations), mark it as 'Correct'.\n"
+    "Only mark it as 'Incorrect' if the errors significantly affect readability, meaning, or context.\n"
+    "Respond strictly in the following format:\n"
+    "1. Correct\n"
+    "2. Incorrect\n"
+    "...\n\n"
+    + "\n".join(prompt_texts)
+)
 
         try:
             response = model.generate_content(prompt)
