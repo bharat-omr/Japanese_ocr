@@ -167,6 +167,13 @@ def extract_text_from_images(image_filenames, batch_size=10):
 @extract_bp.route("/extract-text", methods=["POST"])
 def extract_text():
     """API endpoint to extract handwritten text from a PDF."""
+    if request.method == "OPTIONS":
+        response = jsonify({"message": "CORS preflight successful"})
+        response.headers.add("Access-Control-Allow-Origin", "*")
+        response.headers.add("Access-Control-Allow-Methods", "GET, POST, OPTIONS")
+        response.headers.add("Access-Control-Allow-Headers", "Content-Type")
+        return response, 200
+    
     if "file" not in request.files:
         return jsonify({"error": "No file uploaded"}), 400
 
