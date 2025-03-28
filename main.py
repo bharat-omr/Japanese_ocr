@@ -4,8 +4,9 @@ from flask_cors import CORS
 from socket_config import socketio  # ✅ Import from socket_config.py
 
 app = Flask(__name__)
+
 CORS(app)
-socketio.init_app(app)  
+socketio.init_app(app,cors_allowed_origins="*")  
 
 # Import Blueprints **after initializing Flask & socketio**
 from main3 import extract_bp
