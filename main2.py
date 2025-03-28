@@ -47,6 +47,7 @@ def verify_japanese_text(text_data):
     "If at least 80% of the text is correct and the errors are minor (such as small typos, spacing, or minor variations), mark it as 'Correct'.\n"
     "Only mark it as 'Incorrect' if the errors significantly affect readability, meaning, or context.\n"
     "Respond strictly in the following format (one line per text, only 'Correct' or 'Incorrect'):\n"
+    "Known-Correct References example :としもんだい ,アジア NISE , 1989年1月7日 ,季節風(モンスーン), 季節風(モンスーン) ,世界の屋根. \n"
     "1. Correct\n"
     "2. Incorrect\n"
     "3. Correct\n"

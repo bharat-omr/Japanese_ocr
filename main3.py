@@ -10,7 +10,8 @@ import cv2
 import numpy as np
 import google.generativeai as genai
 from pdf2image import convert_from_path
-
+from flask_socketio import emit
+from socket_config import socketio 
 
 extract_bp = Blueprint("extract", __name__)
 CORS(extract_bp)
@@ -41,11 +42,22 @@ os.makedirs(BASE_DIR, exist_ok=True)
 os.makedirs(PDF_IMAGES_DIR, exist_ok=True)
 os.makedirs(CROPPED_DIR, exist_ok=True)
 
+def send_progress(step, percentage):
+    """Emit real-time progress updates via WebSockets."""
+    if socketio:
+        print(f"📡 Emitting Progress: Step: {step}, Percentage: {percentage}")  # Debug log
+        socketio.emit("progress", {"step": step, "progress_percent": percentage})
+        socketio.sleep(1)
+    else:
+        print("❌ Error: SocketIO is None!")
+
+
+    
 # ------------------- Step 1: Convert PDF to Images -------------------
 def pdf_to_images(pdf_path):
     """Convert PDF pages to images and save them in pdf_images/."""
     os.makedirs(PDF_IMAGES_DIR, exist_ok=True)  # Ensure directory exists
-
+    send_progress("Converting PDF to Images...", 10)
     images = convert_from_path(pdf_path)
     image_paths = []
 
@@ -55,6 +67,7 @@ def pdf_to_images(pdf_path):
         image_paths.append(image_path)
 
     logging.info(f"PDF converted to {len(image_paths)} images.")
+    send_progress("PDF Conversion Completed", 30)
     return image_paths
 
 # ------------------- Step 2: Extract Questions from Images -------------------
@@ -81,6 +94,7 @@ def extract_questions(image_path):
 
 def save_cropped_questions(image_paths):
     """Process images and save extracted questions in static/cropped_questions/."""
+    send_progress("Extracting Questions from Images...", 50)
     cropped_image_filenames = []
 
     for i, image_path in enumerate(image_paths):
@@ -95,11 +109,13 @@ def save_cropped_questions(image_paths):
             cropped_image_filenames.append(cropped_filename)
 
     logging.info(f"Saved {len(cropped_image_filenames)} cropped questions.")
+    send_progress("Question Extraction Completed", 70)
     return cropped_image_filenames
 
 # ------------------- Step 3: Extract Text Using Gemini AI -------------------
 def extract_text_from_images(image_filenames, batch_size=10):
     """Extract handwritten text from cropped images using Gemini AI in batches."""
+    send_progress("Extracting Text from Images...", 80)
     extracted_data = []
     os.makedirs(BASE_DIR, exist_ok=True)  # Ensure the directory exists
     text_file_path = os.path.join(BASE_DIR, "extracted_text.txt")
@@ -142,7 +158,7 @@ def extract_text_from_images(image_filenames, batch_size=10):
                     extracted_data.append({"image_url": f"{BACKEND_API}/static/cropped_questions/{filename}", "text": f"❌ AI processing failed - {str(e)}"})
 
             time.sleep(1)  # Avoid API rate limits
-
+    send_progress("Text Extraction Completed", 100)
     return extracted_data
 
 
