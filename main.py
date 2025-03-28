@@ -5,7 +5,7 @@ from socket_config import socketio  # ✅ Import from socket_config.py
 
 app = Flask(__name__)
 
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "*"}})
 socketio.init_app(app,cors_allowed_origins="*")  
 
 # Import Blueprints **after initializing Flask & socketio**
