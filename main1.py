@@ -13,7 +13,7 @@ from pdf2image import convert_from_path
 
 
 extract_bp = Blueprint("extract", __name__)
-CORS(extract_bp)
+# CORS(extract_bp)
 
 # Configure Logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")

@@ -14,7 +14,7 @@ from flask_socketio import emit
 from socket_config import socketio 
 
 extract_bp = Blueprint("extract", __name__)
-CORS(extract_bp)
+# CORS(extract_bp)
 
 # Configure Logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
