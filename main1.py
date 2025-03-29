@@ -13,7 +13,8 @@ from pdf2image import convert_from_path
 
 
 extract_bp = Blueprint("extract", __name__)
-CORS(extract_bp)
+CORS(extract_bp, resources={r"/*": {"origins": "http://13.113.48.170:3000"}})
+
 
 # Configure Logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
