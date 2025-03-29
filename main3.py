@@ -3,7 +3,7 @@ import re
 import time
 import logging
 from flask import Flask,Blueprint, request, jsonify, send_from_directory
-from flask_cors import CORS
+#from flask_cors import CORS
 from dotenv import load_dotenv
 import PIL.Image
 import cv2
@@ -15,7 +15,7 @@ from socket_config import socketio
 
 extract_bp = Blueprint("extract", __name__)
 # 
-CORS(extract_bp, resources={r"/*": {"origins": "*"}})
+#CORS(extract_bp, resources={r"/*": {"origins": "*"}})
 
 # Configure Logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")

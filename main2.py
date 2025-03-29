@@ -7,7 +7,7 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 
 verify_bp = Blueprint("verify", __name__)
-CORS(verify_bp,resources={r"/*": {"origins": "*"}})
+#CORS(verify_bp,resources={r"/*": {"origins": "*"}})
 # Configure Logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
 
