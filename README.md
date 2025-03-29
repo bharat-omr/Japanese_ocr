@@ -6,7 +6,7 @@ Extract and translate Japanese text from images using OCR technology.
 Japanese_OCR/
 │── ocr_data/                     # Stores OCR-related data
 │   ├── uploads/                  # Uploaded images before processing
-├── processed_data/            # Processed images and extracted text
+│   ├── processed_data/            # Processed images and extracted text
 │
 │── static/                        # Static files (if needed)
 │
@@ -23,6 +23,7 @@ Japanese_OCR/
 │── requirements.txt                 # Dependencies
 │── translate.py                     # Translates extracted text
 
+
 🔹 Features
 ✔ Extracts Japanese text from images
 ✔ Rechecks and improves OCR accuracy
@@ -33,30 +34,17 @@ Japanese_OCR/
 ⚡ Installation
 1️⃣ Clone the repository
 
-git clone https://github.com/Japanese_ocr/Japanese_OCR.git
-
-
+git clone https://github.com/bharat-omr/Japanese_OCR.git
 cd Japanese_OCR
-2️⃣ Create a virtual environment (Optional but recommended)
 
+2️⃣ Create a virtual environment (Optional but recommended)
 
 python -m venv myenv
 source myenv/bin/activate  # On Windows use: myenv\Scripts\activate
 
-
 3️⃣ Install dependencies
+
 pip install -r requirements.txt
-
-🛠 Usage
-Extract text from an image
-
-python src/extract_image_or_text.py --input "processed_data/sample.pdf"
-Recheck extracted text
-
-python src/extract_text_recheck.py --input "processed_data/extracted_text.txt"
-Translate extracted text
-
-python translate.py --input "processed_data/extracted_text.txt"
 
 
 📌 Dependencies
@@ -69,19 +57,6 @@ numpy – Array handling
 googletrans – Translation
 
 socket – Networking (if needed)
-
-Install them using:
-pip install pytesseract opencv-python numpy googletrans
-
-
-🚀 Future Enhancements
-
-Support more languages
-
-Enhance OCR accuracy using AI
-
-📩 Contributing
-Feel free to fork, submit PRs, or raise issues. Let's build together! 🚀
 
 
 ![Screenshot (14)](https://github.com/user-attachments/assets/a03e1b60-40a1-4448-8644-5c378dbc4023)
