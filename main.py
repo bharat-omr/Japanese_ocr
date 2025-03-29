@@ -41,8 +41,12 @@ from take_data import submit_bp
 #from translate import translate_bp
 
 app = Flask(__name__)
-CORS(app, resources={r"/*": {"origins": "*"}})  # Enable CORS for frontend access
-
+# Allow all domains (for testing) or specify the frontend URL
+CORS(app, resources={r"/*": {"origins": "http://13.113.48.170:3000"}})
+# Register Blueprints
+CORS(extract_bp)
+CORS(verify_bp)
+CORS(submit_bp)
 # Register all the Blueprints
 app.register_blueprint(extract_bp, url_prefix="/extract")
 app.register_blueprint(verify_bp, url_prefix="/verify")
