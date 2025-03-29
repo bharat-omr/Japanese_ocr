@@ -13,7 +13,7 @@ from pdf2image import convert_from_path
 
 
 extract_bp = Blueprint("extract", __name__)
-CORS(extract_bp, resources={r"/*": {"origins": "http://13.113.48.170:3000"}})
+CORS(extract_bp, resources={r"/*": {"origins": "*"}})
 
 
 # Configure Logging
@@ -153,12 +153,16 @@ def extract_text_from_images(image_filenames, batch_size=10):
 def extract_text():
     """API endpoint to extract handwritten text from a PDF."""
     if "file" not in request.files:
-        return jsonify({"error": "No file uploaded"}), 400
+        response = jsonify({"error": "No file uploaded"})
+        response.headers.add("Access-Control-Allow-Origin", "*")
+        return response
 
     pdf_file = request.files["file"]
     
     if pdf_file.filename == "":
-        return jsonify({"error": "No file selected"}), 400
+        response = jsonify({"error": "No file selected"})
+        response.headers.add("Access-Control-Allow-Origin", "*")
+        return response
 
     pdf_path = os.path.join(BASE_DIR, pdf_file.filename)
     pdf_file.save(pdf_path)
@@ -167,11 +171,13 @@ def extract_text():
         image_paths = pdf_to_images(pdf_path)
         cropped_filenames = save_cropped_questions(image_paths)
         extracted_data = extract_text_from_images(cropped_filenames)
-
-        return jsonify({"status": "success", "extracted_data": extracted_data})
+        response = jsonify({"status": "success", "extracted_data": extracted_data})
+        response.headers.add("Access-Control-Allow-Origin", "*")
+        return response
     except Exception as e:
-        logging.error(f"Processing failed: {e}")
-        return jsonify({"error": str(e)}), 500
+        response = jsonify({"error": str(e)})
+        response.headers.add("Access-Control-Allow-Origin", "*")
+        return response ,500
 
 # ------------------- New Endpoints for Serving Images -------------------
 @extract_bp.route("/images", methods=["GET"])
@@ -188,7 +194,9 @@ def list_images():
 @extract_bp.route("/extract/images/<filename>")
 def get_image(filename):
     """Serve an image from the directory."""
-    return send_from_directory(CROPPED_DIR, filename)
+    response = send_from_directory(CROPPED_DIR, filename)
+    response.headers.add("Access-Control-Allow-Origin", "*")
+    return response
 
 
 
