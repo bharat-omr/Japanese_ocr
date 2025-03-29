@@ -11,7 +11,7 @@ import numpy as np
 import google.generativeai as genai
 from pdf2image import convert_from_path
 from flask_socketio import emit
-from socket_config import socketio 
+from .socket_config import socketio 
 
 extract_bp = Blueprint("extract", __name__)
 # 

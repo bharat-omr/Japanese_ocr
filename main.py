@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
-from socket_config import socketio  # Import from socket_config.py
+from src.socket_config import socketio  # Import from socket_config.py
 
 app = Flask(__name__)
 
@@ -11,9 +11,9 @@ CORS(app, resources={r"/*": {"origins": "*"}})
 socketio.init_app(app, cors_allowed_origins="*")
 
 #  Import Blueprints **AFTER** initializing Flask & socketio
-from main3 import extract_bp
-from main2 import verify_bp
-from take_data import submit_bp
+from src.extract_text_with_progress_bar import extract_bp
+from src.extract_text_recheck import verify_bp
+from src.submit_data import submit_bp
 
 #  Register Blueprints
 app.register_blueprint(extract_bp, url_prefix="/extract")
