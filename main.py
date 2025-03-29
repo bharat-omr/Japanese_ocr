@@ -1,4 +1,4 @@
-"""from flask import Flask
+from flask import Flask
 from flask_cors import CORS
 from socket_config import socketio  # Import from socket_config.py
 
@@ -26,12 +26,12 @@ def home():
 
 #  Run with WebSockets enabled
 if __name__ == "__main__":
-    socketio.run(app, debug=True, host="0.0.0.0", port=5000, allow_unsafe_werkzeug=True)"""
+    socketio.run(app, debug=True, host="0.0.0.0", port=5000, allow_unsafe_werkzeug=True)
 
 
 
 
-from flask import Flask
+"""from flask import Flask
 from flask_cors import CORS
 
 # Import Blueprints
@@ -42,7 +42,7 @@ from take_data import submit_bp
 
 app = Flask(__name__)
 # Allow all domains (for testing) or specify the frontend URL
-CORS(app, resources={r"/*": {"origins": "http://13.113.48.170:3000"}})
+CORS(app, resources={r"/*": {"origins": "*"}})
 # Register Blueprints
 CORS(extract_bp)
 CORS(verify_bp)
@@ -58,4 +58,4 @@ def home():
     return {"message": "Welcome to the Unified Flask API!"}
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0", port=5000)  # Run on localhost:5000 
+    app.run(debug=True, host="0.0.0.0", port=5000)  # Run on localhost:5000 """
