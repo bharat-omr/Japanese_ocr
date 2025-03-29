@@ -41,7 +41,7 @@ from take_data import submit_bp
 #from translate import translate_bp
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for frontend access
+CORS(app, resources={r"/*": {"origins": "*"}})  # Enable CORS for frontend access
 
 # Register all the Blueprints
 app.register_blueprint(extract_bp, url_prefix="/extract")
